@@ -6,7 +6,7 @@ import Typography from '@mui/material/Typography'
 import Link from '@mui/material/Link'
 
 /**
- * Display information about me or CurDog LLC.
+ * Display information about the app.
  * @returns {JSX.Element}
  * @constructor
  */

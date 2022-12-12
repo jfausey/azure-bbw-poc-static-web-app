@@ -7,7 +7,7 @@ function JFMuiCopyright(props) {
         <Typography variant="body2" color="text.secondary" align="center" {...props}>
             ©
             <Link color="inherit" href="https://mui.com/">
-                CurDog🐾LLC,
+                copyright Owner,
             </Link>{' '}
             {new Date().getFullYear()}
             {'.'}

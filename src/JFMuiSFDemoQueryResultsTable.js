@@ -62,7 +62,7 @@ export default function JFMuiSFDemoQueryResultsTable(props) {
         newSelectionModel.map(i => (
             price += rows[i]['price']
         ))
-        
+
         //console.debug(`HSC: miles = ${miles}, time = ${time}`)
         setTotalActivities(newSelectionModel.length)
         setTotalPrice(price)
