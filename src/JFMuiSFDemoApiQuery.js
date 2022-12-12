@@ -88,11 +88,13 @@ function JFMuiSFDemoApiQuery(props) {
      * @returns {Promise<void>}
      */
     async function performQuery(event) {
+        /*
         let myInit = {
             headers: {}, // OPTIONAL
             response: true, // OPTIONAL (return the entire Axios response object instead of only response.data)
             queryStringParameters: {}
         }
+        */
         let myActivities = []
         /* REMOVED THE AWS API CALL. REPLACE IT LATER ON WITH AN AZURE API CALL.
         const baseQuery = `/sfdemo/${query}`
