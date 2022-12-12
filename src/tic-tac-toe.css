@@ -1,0 +1,128 @@
+/*
+body {
+    /!*
+    font: 14px "Century Gothic", Futura, sans-serif;
+     *!/
+    font: 20px Roboto, sans-serif;
+    margin: 20px;
+}
+*/
+
+ol, ul {
+    padding-left: 30px;
+}
+
+.game {
+    /*background: white;*/
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+}
+
+.game-info {
+    /*background: violet; !* useful for debugging *!*/
+    width: 30%;
+}
+
+.status {
+    background: slategray; /* useful for debugging */
+    border: 3px solid yellowgreen; /* JF: Originally: border: 1px solid #999; */
+    color: white;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.board {
+    /*background-color: blue; !* useful for debugging *!*/
+    display: grid;
+    text-align: center;
+    justify-content: center;
+    /*align-items: start;*/
+    align-content: start;
+    height: 100%;
+    width: 100%; /* Set to 70% if you restore the use of game-info */
+}
+
+.board-row:after {
+    clear: both;
+    content: "";
+    display: table;
+}
+
+.square {
+    background: white; /* JF: Originally: background: #fff; */
+    border: 1px solid black; /* JF: Originally: border: 1px solid #999; */
+    /* border-radius: 50%; /* JF: Added to make the buttons round. */
+    float: left;
+    font-size: 72px;
+    font-weight: bold;
+    color: darkorange; /* JF: Added to change the font color. */
+    line-height: 82px;
+    height: 82px;
+    margin-right: -1px;
+    margin-top: -1px;
+    padding: 0;
+    text-align: center;
+    width: 82px;
+}
+
+.square-x {
+    background: gray; /* JF: Originally: background: #fff; */
+    border: 1px solid darkgray; /* JF: Originally: border: 1px solid #999; */
+    border-radius: 5px; /* JF: Added to make the buttons have rounded corners. */
+    /* box-shadow: 5px 5px #888888; */
+    float: left;
+    font-size: 72px;
+    font-weight: bold;
+    color: darkorange; /* JF: Added to change the font color. */
+    line-height: 82px;
+    height: 82px;
+    margin-right: -1px;
+    margin-top: -1px;
+    padding: 0;
+    text-align: center;
+    width: 82px;
+}
+.square-o {
+    background: paleturquoise; /* JF: Originally: background: #fff; */
+    border: 1px solid dodgerblue; /* JF: Originally: border: 1px solid #999; */
+    border-radius: 5px; /* JF: Added to make the buttons have rounded corners. */
+    /* box-shadow: 5px 5px #888888; */
+    float: left;
+    font-size: 72px;
+    font-weight: bold;
+    color: darkorange; /* JF: Added to change the font color. */
+    line-height: 82px;
+    height: 82px;
+    margin-right: -1px;
+    margin-top: -1px;
+    padding: 0;
+    text-align: center;
+    width: 82px;
+}
+
+.square-win {
+    background: lightpink; /* JF: Originally: background: #fff; */
+    border: 1px solid red; /* JF: Originally: border: 1px solid #999; */
+    border-radius: 50%; /* JF: Added to make the buttons round. */
+    float: left;
+    font-size: 72px;
+    font-weight: bold;
+    color: darkorange; /* JF: Added to change the font color. */
+    line-height: 82px;
+    height: 82px;
+    margin-right: -1px;
+    margin-top: -1px;
+    padding: 0;
+    text-align: center;
+    width: 82px;
+}
+
+.square:focus {
+    outline: none;
+}
+
+.kbd-navigation .square:focus {
+    background: #ddd;
+}

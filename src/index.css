@@ -1,0 +1,196 @@
+body {
+  margin: 0;
+  /*
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
+  */
+  font-family: 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* JF:  My additions follow.  I stole some things from
+ https://www.w3schools.com/css/tryit.asp?filename=trycss_template2_float
+*/
+
+.jf-layout {
+  /*
+  display: flex;
+  flex-direction: row;
+  */
+}
+
+/* Style the header per https://www.w3schools.com/css/tryit.asp?filename=trycss_template2_float
+.header {
+  background-color: #f1f1f1;
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+}
+*/
+
+.jf-header {
+  background-color: darkorange;
+  /*
+  border: 1px solid darkgray;
+  border-radius: 5px;
+  box-shadow: 5px 5px #888888;
+  */
+  color: white; /* the font color. */
+  /*
+  float: left;
+  font-size: 24px;
+  */
+  font-weight: bold;
+  /*
+  height: 34px;
+  line-height: 34px;
+  margin-right: -1px;
+  margin-top: -1px;
+  */
+  padding: 10px;
+  text-align: center;
+  /*
+  width: 34px;
+  */
+}
+
+/* Style the footer per https://www.w3schools.com/css/tryit.asp?filename=trycss_template2_float
+.footer {
+  background-color: #f1f1f1;
+  padding: 10px;
+  text-align: center;
+}
+*/
+
+.jf-footer {
+  background-color: black;
+  /*
+  border: 1px solid darkgray;
+  border-radius: 5px;
+  box-shadow: 5px 5px #888888;
+  */
+  color: white; /* the font color. */
+  /*
+  float: left;
+  font-size: 16px;
+  font-weight: bold;
+  height: 34px;
+  line-height: 34px;
+  margin-right: -1px;
+  margin-top: -1px;
+  */
+  padding: 10px;
+  text-align: center;
+  /*
+  width: 34px;
+  */
+}
+
+.jf-navbar {
+  background: greenyellow;
+  /*
+  border: 1px solid darkgray;
+  border-radius: 5px;
+  box-shadow: 5px 5px #888888;
+  color: darkgray;
+  */
+  float: left;
+  /*
+  font-size: 24px;
+  font-weight: bold;
+  */
+  height: 92vh;
+  /*
+  line-height: 34px;
+  margin-right: -1px;
+  margin-top: -1px;
+  */
+  padding: 10px;
+  text-align: center;
+  width: 25%;
+}
+
+.jf-content {
+  background: lightgray;
+  /*
+  border: 1px solid darkgray;
+  border-radius: 5px;
+  box-shadow: 5px 5px #888888;
+  color: midnightblue;
+  */
+  float: left;
+  /*
+  font-size: 24px;
+  font-weight: bold;
+  */
+  height: 92vh;
+  /*
+  line-height: 34px;
+  margin-right: -1px;
+  margin-top: -1px;
+  */
+  padding: 10px;
+  text-align: left;
+  width: 75%;
+}
+
+.jf-mui-content {
+  padding-top: 80px;
+  background: lightgray;
+  text-align: left;
+  width: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Create three unequal columns that float next to each other */
+/* JF - Do not use.  Incorporate these properties into jf-navbar and jf-content instead. */
+.column {
+  float: left;
+  padding: 10px;
+  height: 300px; /* Should be removed. Only for demonstration */
+}
+
+/* Left and right column */
+/* JF - Do not use.  Incorporate these properties into jf-navbar instead. */
+.column.side {
+  width: 25%;
+}
+
+/* Middle column */
+/* JF - Do not use.  Incorporate these properties into jf-content instead. */
+.column.middle {
+  width: 50%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+/* JF:  Replace the original below with one that uses my styles instead
+@media (max-width: 600px) {
+  .column.side, .column.middle {
+    width: 100%;
+  }
+}
+*/
+
+@media (max-width: 600px) {
+  .jf-navbar, .jf-content {
+    width: 100%;
+  }
+}
