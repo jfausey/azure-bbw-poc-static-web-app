@@ -60,7 +60,7 @@ function JFMuiAppBar(props) {
                     <MenuIcon />
                 </IconButton>
                 <Typography component="h1" variant="h6" color="inherit" align="center" noWrap sx={{ flexGrow: 1 }} >
-                    Azure Serverless React Static Web App POC
+                    Azure Static React Web App for API Gateway + Domain Services POC
                 </Typography>
                 <IconButton color="inherit" onClick={() => alert("Imagine your notifications here!")}>
                     <Badge badgeContent={4} color="secondary">
