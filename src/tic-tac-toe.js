@@ -68,14 +68,14 @@ class Board extends React.Component {
             // TODO: Change the board's background color and play a "ta-da" sound?
             // TODO: Add a "new game" button to the DOM that will reset the board
             // this.setState({})
-        } else if (this.state.squares[i] == _empty) { // Disallow overwriting a square
+        } else if (this.state.squares[i] === _empty) { // Disallow overwriting a square
             // JF:  Unclear why the following statement alone does not work: this.state.squares[i] = _X
             // JF:  It works if you then call: this.setState({squares: this.state.squares})
             // JF:  This suggests that calling setState() results in calling render()
             // JF:  Either way, the following approach using "immutable" (actually, un-mutated) objects is preferred
             const nextSquares = this.state.squares.slice() // create a copy rather than mutating the current array
             nextSquares[i] = this.state.player
-            const nextPlayer = this.state.player == _X ? _O : _X
+            const nextPlayer = this.state.player === _X ? _O : _X
             this.setState({squares: nextSquares, player: nextPlayer})
             // TODO: Reset the move countdown timer?
         } else {
@@ -96,7 +96,7 @@ class Board extends React.Component {
         ]
         for (let i = 0; i < lines.length; i++) {
             const [a, b, c] = lines[i]
-            if (this.state.squares[a] != _empty &&
+            if (this.state.squares[a] !== _empty &&
                 this.state.squares[a] === this.state.squares[b] &&
                 this.state.squares[a] === this.state.squares[c]) {
                 return {
