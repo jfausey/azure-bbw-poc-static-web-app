@@ -28,7 +28,7 @@ function JFMuiSFDemoApiQuery(props) {
     function handleQuery(event) { setQuery(event.target.value)}
 
     function displayHelp() {
-        const searchSyntaxHelp = 'TBD'
+        const searchSyntaxHelp = 'Try simple apparel terms like shirt, pants, dress, etc.'
         alert(searchSyntaxHelp)
     }
 
@@ -104,7 +104,23 @@ function JFMuiSFDemoApiQuery(props) {
         console.debug(`# apiResults = ${apiResult.data.hits.length}`)
         myActivities.push(...apiResult.data.hits)
         */
-        console.debug(`myActivities = ${JSON.stringify(myActivities)}`)
+
+        /*
+        const [data, setData] = React.useState(' ') // 20221212
+        React.useEffect( () => {
+            (async function () {
+                const { text } = await( await fetch(`/api/apparelSearch?name=Jon`)).json()
+                setData(text)
+            })()
+        })
+        */
+        //console.debug(`BOOGER: query = ${query}`)
+        //let data = await (await fetch(`/api/apparelSearch?name=Jon`)).json()
+        let data = await (await fetch(`/api/apparelSearch?${query}`)).text()
+        //console.debug(`data = ${data}`)
+        const results = JSON.parse(data)
+        myActivities.push(...results.hits)
+        //console.debug(`myActivities = ${JSON.stringify(myActivities)}`)
         setActivities(myActivities)
     }
 
